@@ -6,6 +6,7 @@ from models.lenet5_qnn import lenet5_qnn_v1
 from models.lenet5 import lenet5
 from models.mlp_qnn import mlp_qnn_v1
 from models.mlp import mlp
+from models.mlp_no_bias import mlp_no_bias
 
 
 def model_zoo():
@@ -18,7 +19,8 @@ def model_zoo():
         'lenet5_qnn_v1': lenet5_qnn_v1,
         'lenet5': lenet5,
         'mlp_qnn_v1': mlp_qnn_v1,
-        'mlp': mlp
+        'mlp': mlp,
+		'mlp_no_bias': mlp_no_bias
     }
 
     return model_dict

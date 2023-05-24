@@ -85,7 +85,8 @@ if __name__ == "__main__":
     model.summary()
 
     # Specify the names of the layers whose weights you want to print
-    specific_layers = ['quant_fc1', 'quant_fc2', 'quant_fc3']
+	#specific_layers = ['quant_fc1', 'quant_fc2', 'quant_fc3']
+    specific_layers = ['fc1', 'fc2', 'fc3']
 
     # Create a random input tensor for testing
     # input_x = np.random.rand(1, 28, 28, 1)
@@ -106,5 +107,5 @@ if __name__ == "__main__":
     # TODO: Generate matrix multiplication dimension for this fc layer
     for layer in specific_layers:
         getter.get_weights(layer)
-        getter.get_bias(layer)
+		#getter.get_bias(layer)
         getter.get_outputs(input_x, layer)
